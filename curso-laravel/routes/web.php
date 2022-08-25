@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-})->name('main');
-
+})->name('main');*/
+Route::get('/', 'MainController@index')->name('main');
 Route::get('products', 'ProductController@index')->name('products.index');
 
 Route::get('products/create', 'ProductController@create')->name('products.create');
